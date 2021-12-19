@@ -1,0 +1,81 @@
+const setofWord = [
+"In the early medieval era, Christianity, Islam, Judaism, and Zoroastrianism put down roots on India's southern and western coasts.",
+"India has been a federal republic since 1950, governed in a democratic parliamentary system. It is a pluralistic, multilingual and multi-ethnic society.",
+"In the 15th century, the Vijayanagara Empire created a long-lasting composite Hindu culture in south India.",
+"India is a nuclear-weapon state, which ranks high in military expenditure. It has disputes over Kashmir with its neighbours, Pakistan and China, unresolved since the mid-20th century."
+];
+
+const msg=document.getElementById('msg');
+const typewords=document.getElementById('mywords');
+const btn=document.getElementById('btn');
+const result=document.querySelector('#result');
+const correct=document.querySelector('#correct');
+const error=document.querySelector('#error');
+
+let starttime,endtime;
+
+const playGame = () =>{
+    let randomNumber=Math.floor(Math.random()*setofWord.length);
+    msg.innerText=setofWord[randomNumber];
+    let date=new Date();
+    starttime=date.getTime();
+    btn.innerText="Done";
+}
+// =()=>{} isequal to paranthesis header funtion
+const endplay = () =>{    
+    let date=new Date();
+    endtime=date.getTime();
+    let totalTime=((endtime - starttime)/1000);
+    console.log(totalTime);
+
+    let totalStr = typewords.value;
+    let wordcount = wordCounter(totalStr);
+
+    let speed = Math.round((wordcount / totalTime) *60);
+    let finalmsg =  +speed+ " words per minutes";
+    result.innerText = finalmsg;
+
+    finalmsg += comparewords(msg.innerText,totalStr);
+}
+const comparewords = (str1,str2) =>{
+let word1 = str1.split(" ");
+let word2 = str2.split(" ");
+let count = 0;
+
+word1.forEach(function (item,index){
+    if(item == word2[index]){
+        count++;
+    }
+})
+let correctword = +count+ "   correct out of  " +word1.length+ " ";
+console.log(correctword);
+correct.innerText = correctword;
+
+let errorwords = (word1.length - count);
+console.log(errorwords);
+error.innerText = errorwords ;
+}
+
+
+
+const wordCounter = (str) =>{
+    let response = str.split(" ").length;
+    console.log(response);
+    return response;
+}
+
+// first step to declar that things
+
+btn.addEventListener('click',function(){
+if(this.innerText=='Start'){
+    typewords.disabled=false;
+    playGame();
+}
+else if(this.innerText=="Done") 
+{
+    typewords.disabled=true;
+    btn.innerText = "Start";
+    endplay();
+}
+}
+)

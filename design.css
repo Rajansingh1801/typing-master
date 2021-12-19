@@ -1,0 +1,239 @@
+*{
+    padding: 0%;
+    margin: 0%;
+   box-sizing:border-box;
+   background-image: url(new.svg);
+   /* background-color:yellowgreen; */
+}
+.maindiv{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+   
+}
+.centerdiv{
+    position: absolute;
+   top:300px;
+   left: 675px;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+h1{
+    text-transform: uppercase;
+    font-size:3rem;
+    margin-top:100px;
+    color:rgb(219, 7, 7);
+    text-shadow: 1px 2px 3px #2980b2;
+}
+h2{
+    font-family: cursive;
+    text-align: center;
+    
+    font-size:1.7rem;
+    font-weight: 900;
+    /* margin-top:40px; */
+}
+textarea{
+    background-color: rgb(241, 244, 245);
+    border: 15px solid#02090f;
+    color: rgb(29, 3, 3);
+    font-weight: 900;
+    
+  font-size:1.2rem;
+  
+}
+
+
+
+
+button {
+    font-size: 18px;
+    letter-spacing: 2px;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    padding: 0.7em 2em;
+    border: 3px solid #FF0072;
+    border-radius: 2px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
+    /* color: #FF0072; */
+    text-decoration: none;
+    transition: 0.3s ease all;
+    z-index: 1;
+   }
+   
+   button:before {
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: '';
+    background-color: #FF0072;
+    z-index: -1;
+   }
+   
+   button:hover, button:focus {
+    color: white;
+   }
+   
+   button:hover:before, button:focus:before {
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+   }
+   
+   button:active {
+    transform: scale(0.9);
+   }
+   
+
+
+
+
+button{
+        color: black;
+        font-weight: 700;
+        background: rgb(198, 211, 10);
+        font-size: 2rem;
+       padding: 5px;
+}
+.home a{
+    padding: 5px;
+    text-decoration:none;
+    color: black;
+    font-weight: 700;
+    /* background: chartreuse; */
+    background: rgb(218, 221, 10);
+
+}
+button:hover{
+    color: rgb(34, 2, 2);
+    background-color: salmon;
+}
+.home a:hover{
+    color: rgb(34, 2, 2);
+    background-color: salmon;
+
+}
+.show{
+    font-size: 2rem;
+    color: black;
+    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: capitalize;
+}
+.reset{
+    font-size: 2rem;
+   
+    margin-left: 20px;
+}
+/* .b3{
+    font-family: serif;
+    color: red; */
+    /* border-bottom:3px dotted red;
+}
+
+.b2{
+    font-family: serif;
+    color: blue; */
+    /* border-bottom:3px dotted blue;
+}
+.b1{
+    font-family: serif;
+    color: black; */
+    /* border-bottom:3px dotted  black  ;
+} */
+.area{
+    text-align: center;
+    font-size: 6rem;
+}
+.home{
+    margin-left: 25px;
+}
+
+
+.bubbles img{
+width: 90px;
+/* border-radius: 50%; */
+animation: bubble 7s linear infinite;
+background: transparent;
+
+}
+.bubbles{
+    width: 100%;
+display: flex;
+align-items: center;
+justify-content: space-between;
+position: absolute;
+bottom:-100px;
+}
+@keyframes bubble{
+    0%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    25%{
+        transform: translateY(0);
+        opacity: 0;
+    }
+    50%{
+        
+        opacity:1;
+    }
+    75%{
+        
+        opacity:1;
+    }
+    100%{
+        
+        transform: translateY(-80vh);
+        opacity: 0;
+    }
+}
+
+.bubbles img:nth-child(1){
+    animation-delay: 2s;
+}
+.bubbles img:nth-child(2){
+    animation-delay: 1s;
+}
+.bubbles img:nth-child(3){
+    animation-delay: 3s;
+}
+.bubbles img:nth-child(4){
+    animation-delay: 4.5s;
+}
+.bubbles img:nth-child(5){
+    animation-delay: 8s;
+}
+.bubbles img:nth-child(6){
+    animation-delay: 6s;
+}
+.bubbles img:nth-child(7){
+    animation-delay:5s;
+}
+.bubbles img:nth-child(8){
+    animation-delay: 4s;
+}
+
+.bubbles img:nth-child(9){
+    animation-delay: 7s;
+}
+.bubbles img:nth-child(10){
+    animation-delay:1s;
+}
+.bubbles img:nth-child(11){
+    animation-delay: 2s;
+}
+
+.re{
+   /* border: 9px dotted black; */
+    height: auto;
+    width: auto;
+}
+
